@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CarDealerApp.Models.SuppliersViewModel>
+@{
+    ViewBag.Title = "Suppliers";
+}
+
+<h2>Suppliers</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Number of parts</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var supplier in Model)
+        {
+            <tr>
+                <td>@supplier.Id</td>
+                <td>@supplier.Name</td>
+                <td>@supplier.NumberOfParts</td>
+            </tr>
+        }
+    </tbody>
+</table>
